@@ -13,7 +13,7 @@ function Footer(){
                 <Grid container justifyContent='center' alignItems='center' columnSpacing={1}>
                     <Copyright/>
                     <Grid item spacing={2}>
-                        <Typography>Copyright 2023 Eric Chen. All rights reserved.</Typography>
+                        <Typography>Copyright 2025 Eric Chen. All rights reserved.</Typography>
                     </Grid>
                 </Grid>
             </Box>

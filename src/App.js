@@ -64,7 +64,7 @@ function Main(){
   return(
     <>
       <Navbar/>
-      <Hero/>
+      {/* <Hero/> */}
       <About/>
       <Projects/>
       <Contact/>

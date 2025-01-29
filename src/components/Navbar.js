@@ -3,9 +3,9 @@ import {useTheme} from '@mui/material/styles';
 import {Link} from 'react-scroll';
 
 const tabs = [
-    {
-        name:'Home',
-    },
+    // {
+    //     name:'Home',
+    // },
     {
         name:'About',
     },
