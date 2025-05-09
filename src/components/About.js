@@ -14,7 +14,7 @@ function About(){
             {/* <TopWave color='background'/> */}
             <Box align='center'>
                 <Typography className='no-highlight' sx={{textShadow: '0px 6px 16px rgba(0, 0, 0, 0.1)'}} variant='h1' pt='7rem' pb='2rem' color='white.main'>
-                    My Story
+                    About Me
                 </Typography>
             </Box>
             <Box pb='2rem'>
