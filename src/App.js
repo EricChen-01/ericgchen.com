@@ -80,7 +80,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <Routes>
-          <Route path="/" element={<Main/>} />
           <Route path="/resume" element={<Resume/>} />
           <Route path="/writing" element={<Writing/>} />
           <Route path="*" element={<Main/>} />
