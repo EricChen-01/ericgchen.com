@@ -6,6 +6,7 @@ import Contact from './Contact'
 import Footer from './Footer'
 import Resume from './Resume'
 import Writing from './Writing'
+import NotFoundPage from './NotFoundPage'
 
 export {
     Hero,
@@ -15,5 +16,6 @@ export {
     Writing,
     Projects,
     Contact,
-    Footer
+    Footer,
+    NotFoundPage,
 }
