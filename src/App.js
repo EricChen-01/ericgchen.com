@@ -3,8 +3,9 @@ import './App.css';
 import {HashRouter,BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import {ThemeProvider, createTheme } from '@mui/material/styles';
 import {CssBaseline} from '@mui/material'
-import {Hero,Navbar,About,Projects, Resume,Writing, Contact,Footer} from './components'
-
+import {Hero, Navbar, About, Projects, Resume, Writing, Contact, Footer, NotFoundPage} from './components'
+import {FrontPage,Footer as PortfolioFooter} from './components/NewPortfolio';
+import portfolioTheme from './themes/PortfolioTheme';
 
 const theme = createTheme({
   palette: {
@@ -60,6 +61,7 @@ const theme = createTheme({
   }
 });
 
+
 function Main(){
   return(
     <>
@@ -73,19 +75,56 @@ function Main(){
   )
 }
 
+function PortfolioMain(){
+  return(
+  <>
+      <FrontPage/>
+      <PortfolioFooter/>
+  </>
+  )
+}
+
+// routes
+function MainRoutes() {
+  return (
+    <Routes>
+      <Route path="/resume" element={<Resume />} />
+      <Route path="/writing" element={<Writing />} />
+      <Route path="/" element={<Main />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+  );
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <CssBaseline/>
-        <Routes>
-          <Route path="/resume" element={<Resume/>} />
-          <Route path="/writing" element={<Writing/>} />
-          <Route path="*" element={<Main/>} />
-        </Routes>
-        <Footer/>
-      </ThemeProvider>
+      <Routes>
+
+        {/* MAIN SITE */}
+        <Route
+          path="/*"
+          element={
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <MainRoutes />
+              <Footer />
+            </ThemeProvider>
+          }
+        />
+
+        {/* PORTFOLIO SITE */}
+        <Route
+          path="/portfolio/*"
+          element={
+            <ThemeProvider theme={portfolioTheme}>
+              <CssBaseline />
+              <PortfolioMain />
+            </ThemeProvider>
+          }
+        />
+
+      </Routes>
     </BrowserRouter>
   )
 }
