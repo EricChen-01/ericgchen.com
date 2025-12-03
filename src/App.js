@@ -2,7 +2,7 @@
 import './App.css';
 import {HashRouter,BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import {ThemeProvider, createTheme } from '@mui/material/styles';
-import {CssBaseline} from '@mui/material'
+import {CssBaseline, Box} from '@mui/material'
 import {Hero, Navbar, About, Projects, Resume, Writing, Contact, Footer, NotFoundPage} from './components'
 import {FrontPage,Footer as PortfolioFooter} from './components/NewPortfolio';
 import portfolioTheme from './themes/PortfolioTheme';
@@ -77,10 +77,19 @@ function Main(){
 
 function PortfolioMain(){
   return(
-  <>
-      <FrontPage/>
-      <PortfolioFooter/>
-  </>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh", // make container fill viewport
+      }}
+    >
+      {/* Content grows to fill space */}
+      <Box sx={{ flexGrow: 1 }}>
+        <FrontPage />
+      </Box>
+      <PortfolioFooter />
+    </Box>
   )
 }
 
