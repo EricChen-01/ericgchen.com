@@ -9,7 +9,6 @@ function Footer(){
       py={2} // vertical padding
       px={4} // horizontal padding
       textAlign="center"
-      border="1px solid"
     >
       <Typography variant="body2" component="div" display="inline-flex" alignItems="center">
         <CopyrightIcon fontSize="small" />

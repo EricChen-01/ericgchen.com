@@ -10,7 +10,7 @@ function FrontPage(){
                 direction='column'
                 justifyContent='space-around'
             >
-                <Box align='center' sx={{pt:30}} border='1px solid red'>
+                <Box align='center' sx={{pt:30}}>
                     <Typography variant='h2'color='text.primary'>
                     Hello! My name is Eric
                     </Typography>
@@ -18,7 +18,7 @@ function FrontPage(){
                         Software Engineer
                     </Typography>
                 </Box>
-                <Box align='left' border='1px solid blue'>
+                <Box align='left'>
                     <img className='round' style={{border:'1px solid black', maxWidth: '300px', width: '100%', height: 'auto'}} src={me} alt='Eric Chen'/>
                 </Box>
             </Grid>
