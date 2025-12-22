@@ -4,8 +4,12 @@ import {HashRouter,BrowserRouter, Routes, Route, NavLink } from 'react-router-do
 import {ThemeProvider, createTheme } from '@mui/material/styles';
 import {CssBaseline, Box} from '@mui/material'
 import {Hero, Navbar, About, Projects, Resume, Writing, Contact, Footer, NotFoundPage} from './components'
-import {FrontPage,Footer as PortfolioFooter} from './components/NewPortfolio';
+import CenteredDivider from './components/CenteredDivider';
+import {FrontPage,Footer as PortfolioFooter, ContactBar} from './components/NewPortfolio';
 import portfolioTheme from './themes/PortfolioTheme';
+
+const linkedinUrl = "https://www.linkedin.com/in/erxcchen/";
+const email = "echen3225@gmail.com";
 
 const theme = createTheme({
   palette: {
@@ -87,7 +91,9 @@ function PortfolioMain(){
       {/* Content grows to fill space */}
       <Box sx={{ flexGrow: 1 }}>
         <FrontPage />
+        <ContactBar linkedinUrl={linkedinUrl} email={email} />
       </Box>
+      <CenteredDivider variant='middle' />
       <PortfolioFooter />
     </Box>
   )
