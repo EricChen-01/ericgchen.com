@@ -3,6 +3,8 @@ import CopyrightIcon from "@mui/icons-material/Copyright";
 
 
 function Footer(){
+   let currentYear = new Date().getFullYear();
+
     return(
     <Box
       component="footer"
@@ -12,7 +14,7 @@ function Footer(){
     >
       <Typography variant="body2" component="div" display="inline-flex" alignItems="center">
         <CopyrightIcon fontSize="small" />
-        <Box ml={0.5}>Copyright 2026 Eric Chen. All rights reserved.</Box>
+        <Box ml={0.5}>Copyright {currentYear} Eric Chen. All rights reserved.</Box>
       </Typography>
     </Box>
     )
