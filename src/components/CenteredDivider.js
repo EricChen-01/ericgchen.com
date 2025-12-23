@@ -9,15 +9,17 @@ import { Divider } from '@mui/material';
  * via the `width` prop or pass a custom `sx` to further style it.
  */
 function CenteredDivider(props) {
-  const { sx, width, ...rest } = props;
+  const { sx, width, color, ...rest } = props;
 
   // default width can be overridden by passing a width prop
   const defaultWidth = width ?? { xs: '90%', md: '60%' };
 
+  const defaultColor = color ?? 'primary';
+
   // merge sx while ensuring our default width + centering (mx: 'auto') are applied
   const mergedSx = Array.isArray(sx)
-    ? [{ width: defaultWidth, mx: 'auto' }, ...sx]
-    : { width: defaultWidth, mx: 'auto', ...(sx || {}) };
+    ? [{ width: defaultWidth, mx: 'auto', bgcolor: defaultColor }, ...sx]
+    : { width: defaultWidth, mx: 'auto', bgcolor: defaultColor, ...(sx || {}) };
 
   return <Divider sx={mergedSx} {...rest} />;
 }
