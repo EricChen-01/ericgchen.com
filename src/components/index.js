@@ -7,6 +7,7 @@ import Footer from './Footer'
 import Resume from './Resume'
 import Writing from './Writing'
 import NotFoundPage from './NotFoundPage'
+import CenteredDivider from './CenteredDivider';
 
 export {
     Hero,
@@ -18,4 +19,5 @@ export {
     Contact,
     Footer,
     NotFoundPage,
+    CenteredDivider,
 }

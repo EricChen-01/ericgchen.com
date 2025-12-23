@@ -3,8 +3,7 @@ import './App.css';
 import {HashRouter,BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import {ThemeProvider, createTheme } from '@mui/material/styles';
 import {CssBaseline, Box} from '@mui/material'
-import {Hero, Navbar, About, Projects, Resume, Writing, Contact, Footer, NotFoundPage} from './components'
-import CenteredDivider from './components/CenteredDivider';
+import {Hero, Navbar, About, Projects, Resume, Writing, Contact, Footer, NotFoundPage, CenteredDivider} from './components'
 import {FrontPage,Footer as PortfolioFooter, ContactBar} from './components/NewPortfolio';
 import portfolioTheme from './themes/PortfolioTheme';
 
@@ -90,8 +89,8 @@ function PortfolioMain(){
     >
       {/* Content grows to fill space */}
       <Box sx={{ flexGrow: 1 }}>
-        <FrontPage />
-        <ContactBar linkedinUrl={linkedinUrl} email={email} />
+        <FrontPage/>
+        <ContactBar linkedinUrl={linkedinUrl} email={email}/>
       </Box>
       <CenteredDivider variant='middle' />
       <PortfolioFooter />
