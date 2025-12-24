@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, Stack, Link, Button} from "@mui/material";
-import {CenteredDivider} from '../../components';
+import {CenteredDivider, HoverLink} from '../../components';
 import me from '../../images/me.png';
 
 function FrontPage(){
@@ -48,11 +48,11 @@ function FrontPage(){
                                 <CenteredDivider sx={{ mb: 2 }}/>
 
                                 <Stack spacing={1} sx={{ alignItems: { xs: 'center', md: 'center' }}}>
-                                    <Button color='secondary' href="/resume" variant="contained" size="small" sx={{ mt: 1}}>
+                                    <Button color='secondary' href="/resume" variant="contained" size="small" sx={{ mt: 1, '&:hover': { backgroundColor: 'primary.main' }}}>
                                     View Resume
                                     </Button>
 
-                                    <Link href="/writing" underline="none" color="text.secondary">Writing — Notes & essays from college</Link>
+                                    <HoverLink href="/writing" underline="none" color="text.secondary">Writing — Notes & essays from college</HoverLink>
                                 </Stack>
                             </Box>
                         </Grid>

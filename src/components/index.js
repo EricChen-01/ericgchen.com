@@ -8,6 +8,7 @@ import Resume from './Resume'
 import Writing from './Writing'
 import NotFoundPage from './NotFoundPage'
 import CenteredDivider from './CenteredDivider';
+import HoverLink from './HoverLink'
 
 export {
     Hero,
@@ -20,4 +21,5 @@ export {
     Footer,
     NotFoundPage,
     CenteredDivider,
+    HoverLink,
 }
