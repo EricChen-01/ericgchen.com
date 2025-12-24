@@ -4,7 +4,7 @@ import {HashRouter,BrowserRouter, Routes, Route, NavLink } from 'react-router-do
 import {ThemeProvider, createTheme } from '@mui/material/styles';
 import {CssBaseline, Box} from '@mui/material'
 import {Hero, Navbar, About, Projects, Resume, Writing, Contact, Footer, NotFoundPage, CenteredDivider} from './components'
-import {FrontPage,Footer as PortfolioFooter, ContactBar} from './components/NewPortfolio';
+import {FrontPage,Footer as PortfolioFooter, ContactBar, Projects as PortfolioProjects} from './components/NewPortfolio';
 import portfolioTheme from './themes/PortfolioTheme';
 
 const linkedinUrl = "https://www.linkedin.com/in/erxcchen/";
@@ -81,15 +81,16 @@ function Main(){
 function PortfolioMain(){
   return(
     <Box
-      sx={{
+    sx={{
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh", // make container fill viewport
       }}
-    >
+      >
       {/* Content grows to fill space */}
       <Box sx={{ flexGrow: 1 }}>
         <FrontPage/>
+        <PortfolioProjects/>
         <ContactBar linkedinUrl={linkedinUrl} email={email}/>
       </Box>
       <CenteredDivider variant='middle' />
@@ -99,6 +100,15 @@ function PortfolioMain(){
 }
 
 // routes
+function PortfolioRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<PortfolioMain />} />
+      <Route path="/*" element={<><NotFoundPage /><PortfolioFooter /></>} />
+    </Routes>
+  )
+}
+
 function MainRoutes() {
   return (
     <Routes>
@@ -133,7 +143,7 @@ function App() {
           element={
             <ThemeProvider theme={portfolioTheme}>
               <CssBaseline />
-              <PortfolioMain />
+              <PortfolioRoutes />
             </ThemeProvider>
           }
         />
