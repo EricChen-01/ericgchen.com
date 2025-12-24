@@ -8,7 +8,7 @@ const portfolioTheme = createTheme({
       paper: '#FFFFFF',     // default paper
     },
     primary: {
-      main: '#CAA8F5',      // soft purple accent
+      main: '#1050A4',      // soft purple accent
       contrastText: '#253237',
     },
     secondary: {
