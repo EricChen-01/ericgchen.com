@@ -1,6 +1,6 @@
 import { Box, Grid, Typography, Stack, Link, Button} from "@mui/material";
-import {CenteredDivider, HoverLink} from '../../components';
-import me from '../../images/me.png';
+import {CenteredDivider, HoverLink} from '.';
+import me from '../images/me.png';
 
 function FrontPage(){
     return(

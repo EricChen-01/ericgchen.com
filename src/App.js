@@ -3,8 +3,7 @@ import './App.css';
 import {HashRouter,BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import {ThemeProvider, createTheme } from '@mui/material/styles';
 import {CssBaseline, Box} from '@mui/material'
-import {Hero, Navbar, About, Projects, Resume, Writing, Contact, Footer, NotFoundPage, CenteredDivider} from './components'
-import {FrontPage,Footer as PortfolioFooter, ContactBar, Projects as PortfolioProjects} from './components/NewPortfolio';
+import {Resume, Writing, NotFoundPage, CenteredDivider, FrontPage, Footer as PortfolioFooter, ContactBar, Projects as PortfolioProjects} from './components'
 import portfolioTheme from './themes/PortfolioTheme';
 
 const linkedinUrl = "https://www.linkedin.com/in/erxcchen/";
@@ -64,20 +63,6 @@ const theme = createTheme({
   }
 });
 
-
-function Main(){
-  return(
-    <>
-      <Navbar/>
-      {/* <Hero/> */}
-      <About/>
-      <Projects/>
-      <Contact/>
-      {/* <Footer/> */}
-    </>
-  )
-}
-
 function PortfolioMain(){
   return(
     <Box
@@ -104,42 +89,20 @@ function PortfolioRoutes() {
   return (
     <Routes>
       <Route path="/" element={<PortfolioMain />} />
+      <Route path="/resume" element={<><Resume /><PortfolioFooter /></>} />
+      <Route path="/writing" element={<><Writing /><PortfolioFooter /></>} />
       <Route path="/*" element={<><NotFoundPage /><PortfolioFooter /></>} />
     </Routes>
   )
-}
-
-function MainRoutes() {
-  return (
-    <Routes>
-      <Route path="/resume" element={<Resume />} />
-      <Route path="/writing" element={<Writing />} />
-      <Route path="/" element={<Main />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
-  );
 }
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-
-        {/* MAIN SITE */}
-        <Route
-          path="/*"
-          element={
-            <ThemeProvider theme={theme}>
-              <CssBaseline />
-              <MainRoutes />
-              <Footer />
-            </ThemeProvider>
-          }
-        />
-
         {/* PORTFOLIO SITE */}
         <Route
-          path="/portfolio/*"
+          path="/*"
           element={
             <ThemeProvider theme={portfolioTheme}>
               <CssBaseline />

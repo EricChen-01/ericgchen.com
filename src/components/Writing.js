@@ -1,6 +1,5 @@
 import {useTheme} from '@mui/material/styles';
-import {Box,Typography,Container,Grid,Paper} from '@mui/material';
-import {TopWave,BottomWave} from './custom';
+import {Box,Typography,Grid} from '@mui/material';
 import {Link} from 'react-router-dom'
 
 
@@ -54,7 +53,6 @@ function Writing(){
                     </Grid>
                 </Box>
             </Box>
-            <BottomWave color='background'/>
         </Box>
     )
 }

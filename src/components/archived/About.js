@@ -1,11 +1,7 @@
 import {useTheme} from '@mui/material/styles';
 import {Box,Typography,Container,Grid,List,ListItem,ListItemText} from '@mui/material';
-import {Link} from 'react-router-dom'
-import {TopWave,BottomWave} from './custom';
-import me from '../images/me.png';
+import me from '../../images/me.png';
 import { GlassCard } from './custom/GlassmorphicCard';
-import { color } from '@mui/system';
-
 
 function About(){
     const theme = useTheme();
