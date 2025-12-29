@@ -5,5 +5,6 @@ export const writing = {
     description: "Here are some writings I've done.",
     technologies: ["User Instructions","Press Release","Collaborative Presentation"],
     isPath: true,
-    path:'/writing'
+    path:'/writing',
+    image: ""
 }
