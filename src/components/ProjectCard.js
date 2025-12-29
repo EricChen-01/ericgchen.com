@@ -1,15 +1,16 @@
-import React from 'react';
 import {
   Card,
+  CardMedia,
   CardContent,
   CardActions,
   Box,
   Typography,
   Stack,
   Chip,
-  Button,
   Link as MuiLink,
+  Button,
 } from '@mui/material';
+import ThemedButton from './ThemedButton';
 
 /**
  * ProjectCard
@@ -49,7 +50,7 @@ function ProjectCard({
       {...rest}
     >
       {image && (
-        <Box
+        <CardMedia
           component="img"
           src={image}
           alt={title}
@@ -98,20 +99,20 @@ function ProjectCard({
               <Stack direction="row" spacing={1} flexWrap="wrap">
                 {links.map((l) => (
                   l.external ? (
-                    <Button key={l.href} size="small" variant="contained" href={l.href} component={MuiLink} target="_blank" rel="noopener" sx={{ bgcolor: 'primary.main', color: 'primary.contrastText' }}>
-                      {l.label}
-                    </Button>
+                    <ThemedButton key={l.href} size="small" href={l.href} component={MuiLink} target="_blank" rel="noopener">
+                      {l.label} 
+                    </ThemedButton>
                   ) : (
-                    <Button key={l.href} size="small" variant="contained" href={l.href} sx={{ bgcolor: 'primary.main', color: 'primary.contrastText' }}>
+                    <ThemedButton key={l.href} href={l.href} size="small">
                       {l.label}
-                    </Button>
+                    </ThemedButton>
                   )
                 ))}
               </Stack>
             )}
           </Box>
         )}
-
+    
         {children}
       </CardContent>
     </Card>
