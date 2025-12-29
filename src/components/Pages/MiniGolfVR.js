@@ -5,5 +5,5 @@ export const project = {
     technologies: ['C#', 'Unity', 'AR'],
     isPath: false,
     path:'https://github.com/EricChen-01/MiniGolfVR',
-    image: "https://cdn.prod.website-files.com/63a5463b6c31f2d40f1d3a47/66aad35d33391259ac56b91b_goose.png"
+    image: "https://raw.githubusercontent.com/EricChen-01/MiniGolfVR/refs/heads/main/MiniGolf.png"
 }
