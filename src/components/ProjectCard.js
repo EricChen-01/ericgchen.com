@@ -54,9 +54,9 @@ function ProjectCard({
           src={image}
           alt={title}
           sx={{
-            width: { xs: '100%', sm: 200, md: 'clamp(160px, 20vw, 250px)' },
+            width: { xs: '100%', sm: 140, md: 160 },
+            maxWidth: 180,
             height: 'auto',
-            maxWidth: '100%',
             display: 'block',
             flexShrink: 0,
             maxHeight: { xs: 220, md: 'none' },
@@ -66,7 +66,7 @@ function ProjectCard({
         />
       )}
 
-      <CardContent sx={{ flex: 1, p: 2, border: '1px solid green' }}>
+      <CardContent sx={{ flex: 1, p: 2,border: '1px solid green' }}>
         {title && (
           <Typography variant="h6" component="h3" gutterBottom>
             {title}
@@ -86,7 +86,7 @@ function ProjectCard({
         )}
 
         {(tags.length > 0 || links.length > 0) && (
-          <Box sx={{ px: 2, pb: 2 }} border='1px solid blue'>
+          <Box sx={{ px: 'auto'}} border='1px solid blue'>
             {tags.length > 0 && (
               <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: links.length > 0 ? 1 : 0 }}>
                 {tags.map((t) => (
@@ -112,7 +112,7 @@ function ProjectCard({
             )}
           </Box>
         )}
-        
+
         {children}
       </CardContent>
     </Card>
