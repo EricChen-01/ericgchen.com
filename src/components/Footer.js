@@ -1,24 +1,23 @@
-import {Box,Typography,Grid} from '@mui/material'
-import {Copyright} from '@mui/icons-material';
+import { Box, Typography } from "@mui/material";
+import CopyrightIcon from "@mui/icons-material/Copyright";
+
 
 function Footer(){
+   let currentYear = new Date().getFullYear();
+
     return(
-        <Box bgcolor='background.main'>
-            <Box padding={5}>
-                <Grid container justifyContent='center'>
-                    <Grid item>
-                        <Typography>Eric Chen</Typography>
-                    </Grid>
-                </Grid>
-                <Grid container justifyContent='center' alignItems='center' columnSpacing={1}>
-                    <Copyright/>
-                    <Grid item spacing={2}>
-                        <Typography>Copyright 2025 Eric Chen. All rights reserved.</Typography>
-                    </Grid>
-                </Grid>
-            </Box>
-        </Box>
+    <Box
+      component="footer"
+      py={2} // vertical padding
+      px={4} // horizontal padding
+      textAlign="center"
+    >
+      <Typography variant="body2" component="div" display="inline-flex" alignItems="center">
+        <CopyrightIcon fontSize="small" />
+        <Box ml={0.5}>Copyright {currentYear} Eric Chen. All rights reserved.</Box>
+      </Typography>
+    </Box>
     )
 }
 
-export default Footer
+export default Footer;

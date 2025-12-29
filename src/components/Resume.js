@@ -1,12 +1,7 @@
 import {useTheme} from '@mui/material/styles';
 import {Box,Typography,Grid, List, ListItem,ListItemText, ListItemIcon} from '@mui/material';
-import {TopWave,BottomWave} from './custom';
-import NavigationIcon from '@mui/icons-material/Navigation';
 import resume from '../images/Eric_Chen_Resume.pdf';
-import { GlassCard } from './custom/GlassmorphicCard';
 import {Link} from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import KUTE from 'kute.js';
 
 function Resume(){
     const theme = useTheme();
@@ -31,7 +26,7 @@ function Resume(){
                 </Box>
                 
             </Box>
-            <BottomWave color='background'/>
+            {/* <BottomWave color='background'/> */}
         </Box>
     )
 }

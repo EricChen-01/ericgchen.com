@@ -5,5 +5,6 @@ export const project = {
     description: 'TBA',
     technologies: ['C'],
     isPath: false,
-    path:''
+    path:'',
+    image: ""
 }
