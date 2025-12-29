@@ -1,7 +1,6 @@
 import { Box, Grid, Typography} from "@mui/material";
-import {CenteredDivider, HoverLink, ProjectCard} from '../../components';
+import {CenteredDivider, ProjectCard} from '../../components';
 import {projects} from '../Pages';
-import { BorderColor } from "@mui/icons-material";
 
 function Projects() {
     return (
@@ -23,6 +22,7 @@ function Projects() {
                                 subtitle={project.subtitle}
                                 description={project.description}
                                 tags={project.technologies}
+                                links={[{ label: "Learn More", href: project.path, external: !project.isPath }]}
                                 image={project.image}
                                 sx={{ maxWidth: { xs: '100%', sm: 520, md: 720 }, border:"5px solid", borderColor:"primary.main"}}
                             />
