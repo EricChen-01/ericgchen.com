@@ -62,11 +62,10 @@ function ProjectCard({
             maxHeight: { xs: 220, md: 'none' },
             objectFit: 'contain',
           }}
-          border='1px solid red'
         />
       )}
 
-      <CardContent sx={{ flex: 1, p: 2,border: '1px solid green' }}>
+      <CardContent sx={{ flex: 1, p: 2 }}>
         {title && (
           <Typography variant="h6" component="h3" gutterBottom>
             {title}
@@ -86,7 +85,7 @@ function ProjectCard({
         )}
 
         {(tags.length > 0 || links.length > 0) && (
-          <Box sx={{ px: 'auto'}} border='1px solid blue'>
+          <Box sx={{ px: 'auto'}}>
             {tags.length > 0 && (
               <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: links.length > 0 ? 1 : 0 }}>
                 {tags.map((t) => (
