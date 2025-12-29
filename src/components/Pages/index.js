@@ -4,11 +4,13 @@ import {project as playlister} from './PlayLister';
 import {project as patchclone} from './PatchClone';
 import {project as heap} from './HeapAllicator';
 import {project as tracer} from './BitCoinTracer';
+import {project as minigolfvr} from './MiniGolfVR';
 
 export const projects = [
     iosshopper,
     playlister,
     kayle,
+    minigolfvr,
     //patchclone,
     //heap,
     //tracer,
