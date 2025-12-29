@@ -9,6 +9,7 @@ import Writing from './Writing'
 import NotFoundPage from './NotFoundPage'
 import CenteredDivider from './CenteredDivider';
 import HoverLink from './HoverLink'
+import ProjectCard from './ProjectCard';
 
 export {
     Hero,
@@ -22,4 +23,5 @@ export {
     NotFoundPage,
     CenteredDivider,
     HoverLink,
+    ProjectCard,
 }
