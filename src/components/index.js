@@ -10,6 +10,7 @@ import NotFoundPage from './NotFoundPage'
 import CenteredDivider from './CenteredDivider';
 import HoverLink from './HoverLink'
 import ProjectCard from './ProjectCard';
+import ThemedButton from './ThemedButton'
 
 export {
     Hero,
@@ -24,4 +25,5 @@ export {
     CenteredDivider,
     HoverLink,
     ProjectCard,
+    ThemedButton,
 }
