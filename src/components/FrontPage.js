@@ -1,8 +1,12 @@
-import { Box, Grid, Typography, Stack, Link, Button} from "@mui/material";
+import { Box, Grid, Typography, Stack, Switch, Button, IconButton, Tooltip} from "@mui/material";
+import { Brightness4, Brightness7} from '@mui/icons-material';
 import {CenteredDivider, HoverLink} from '.';
 import me from '../images/me.png';
+import { usePortfolioThemeMode } from "../themes/PortfolioTheme";
 
 function FrontPage(){
+    const {mode, setMode} = usePortfolioThemeMode();
+
     return(
         <Box>
             <Grid 
@@ -11,6 +15,16 @@ function FrontPage(){
                 justifyContent='space-around'
                 alignItems='center'
             >
+                <Grid item xs={12}>
+                    <Box align='center'>
+                        <Tooltip title="Toggle Dark mode">
+                            <IconButton onClick={()=> setMode(mode === 'dark' ? 'light' : 'dark')} color="inherit">
+                                {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+                            </IconButton>
+                        </Tooltip>
+                        <CenteredDivider width='50px'/>
+                    </Box>
+                </Grid>
                 <Grid item xs={12}>
                     <Box align='center' sx={{pt:10}}>
                         <Typography variant='h2' color='text.primary'>
