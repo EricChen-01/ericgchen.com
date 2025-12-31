@@ -5,5 +5,6 @@ export const project = {
     technologies: ['Typescript', 'MongoDB', 'ExpressJs', 'Leaflet'],
     isPath: false,
     path:'https://github.com/JEMS-CSE416/JEMS',
-    image: "/images/Jems.png"
+    image: "/images/Jems.png",
+    links: [{ label: "Project Document", href: "https://docs.google.com/document/d/1tM8xPhdPV0YCqEauyfCkZ7H9PylHb4w-IZ7BErHc9L0/edit?tab=t.0#heading=h.gp1ng7x3chni", external: true }]
 }

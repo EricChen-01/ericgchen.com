@@ -22,7 +22,7 @@ function Projects() {
                                 subtitle={project.subtitle}
                                 description={project.description}
                                 tags={project.technologies}
-                                links={[{ label: "Learn More", href: project.path, external: !project.isPath }]}
+                                links={[{ label: "Learn More", href: project.path, external: !project.isPath }, ...(project.links || [])]}
                                 image={project.image}
                                 sx={{ maxWidth: { xs: '100%', sm: 520, md: 720 }, border:"5px solid", borderColor:"primary.main"}}
                             />
