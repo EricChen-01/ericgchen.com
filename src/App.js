@@ -31,6 +31,38 @@ function PortfolioMain(){
   )
 }
 
+function ResumeMain(){
+  return(
+    <>
+    <Resume />
+    <ContactBar linkedinUrl={linkedinUrl} email={email} />
+    <CenteredDivider />
+    <PortfolioFooter /></>
+  )
+}
+
+function WritingMain(){
+  return(
+    <>
+      <Writing />
+      <ContactBar linkedinUrl={linkedinUrl} email={email} />
+      <CenteredDivider />
+      <PortfolioFooter />
+    </>
+  )
+}
+
+function PageNotFoundedMain(){
+  return(
+    <>
+      <NotFoundPage />
+      <ContactBar linkedinUrl={linkedinUrl} email={email} />
+      <CenteredDivider />
+      <PortfolioFooter />
+    </>
+  )
+}
+
 // routes
 function PortfolioRoutes() {
   const { theme } = usePortfolioThemeMode();
@@ -39,9 +71,9 @@ function PortfolioRoutes() {
       <CssBaseline />
       <Routes>
         <Route path="/" element={<PortfolioMain />} />
-        <Route path="/resume" element={<><Resume /><PortfolioFooter /></>} />
-        <Route path="/writing" element={<><Writing /><PortfolioFooter /></>} />
-        <Route path="/*" element={<><NotFoundPage /><PortfolioFooter /></>} />
+        <Route path="/resume" element={<ResumeMain />} />
+        <Route path="/writing" element={<WritingMain />} />
+        <Route path="/*" element={<PageNotFoundedMain />} />
       </Routes>
     </ThemeProvider>
   )
