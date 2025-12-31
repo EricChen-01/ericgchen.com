@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 /**
  * SimpleContactBar
  * Minimal contact bar with LinkedIn and Email links.
- * Usage: import and place where you want the links to appear.
+ * Usage: import and place where you want the links to appear. Use linkedInUrl and email props to add the links otherwise nothign will show up.
  */
 function ContactBar({ linkedinUrl, email, sx }) {
   const mailto = email ? `mailto:${email}` : undefined;
