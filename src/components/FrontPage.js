@@ -1,4 +1,5 @@
-import { Box, Grid, Typography, Stack, Switch, Button, IconButton, Tooltip} from "@mui/material";
+import { NavLink } from 'react-router-dom';
+import { Box, Grid, Typography, Stack, Switch, Button, IconButton, Tooltip } from "@mui/material";
 import { Brightness4, Brightness7} from '@mui/icons-material';
 import {CenteredDivider, HoverLink} from '.';
 import me from '../images/me.png';
@@ -62,11 +63,11 @@ function FrontPage(){
                                 <CenteredDivider sx={{ mb: 2 }}/>
 
                                 <Stack spacing={1} sx={{ alignItems: { xs: 'center', md: 'center' }}}>
-                                    <Button color='secondary' href="/resume" variant="contained" size="small" sx={{ mt: 1, '&:hover': { backgroundColor: 'primary.main' }}}>
+                                    <Button component={NavLink} color='secondary' to="/resume" variant="contained" size="small" sx={{ mt: 1, '&:hover': { backgroundColor: 'primary.main' }}}>
                                     View Resume
                                     </Button>
 
-                                    <HoverLink href="/writing" underline="none" color="text.secondary">Writing — Notes & essays from college</HoverLink>
+                                    <HoverLink component={NavLink} to="/writing" underline="none" color="text.secondary">Writing — Notes & essays from college</HoverLink>
                                 </Stack>
                             </Box>
                         </Grid>
