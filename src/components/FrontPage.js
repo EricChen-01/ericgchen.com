@@ -12,7 +12,7 @@ function FrontPage(){
         <Box>
             <Grid 
                 container
-                height='100vh'
+                minHeight='100vh'
                 justifyContent='space-around'
                 alignItems='center'
             >

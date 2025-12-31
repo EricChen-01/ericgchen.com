@@ -96,7 +96,7 @@ function ProjectCard({
             )}
 
             {links.length > 0 && (
-              <Stack direction="row" spacing={1} flexWrap="wrap">
+              <Stack direction="row" gap={1} flexWrap="wrap">
                 {links.map((l) => (
                   l.external ? (
                     <ThemedButton key={l.href} size="small" href={l.href} component={MuiLink} target="_blank" rel="noopener">
