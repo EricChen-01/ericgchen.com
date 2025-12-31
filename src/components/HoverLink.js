@@ -1,4 +1,5 @@
 import Link from '@mui/material/Link';
+import { NavLink } from 'react-router-dom';
 
 /**
  * HoverLink
@@ -6,10 +7,9 @@ import Link from '@mui/material/Link';
  * preserving any incoming `sx` styles. Defaults to primary theme color on hover.
  */
 function HoverLink(props) {
-  const { sx, color, children, ...rest } = props;
+  const { sx, to, color, children, ...rest } = props;
 
   const baseColor = color ?? 'text.primary';
-
   const hoverRule = {
     color: baseColor,
     '&:hover': {
@@ -19,8 +19,12 @@ function HoverLink(props) {
 
   const mergedSx = Array.isArray(sx) ? [hoverRule, ...sx] : { ...hoverRule, ...(sx || {}) };
 
+  const NavLinkProps = to
+  ? { component: NavLink, to }
+  : {};
+
   return (
-    <Link sx={mergedSx} {...rest}>
+    <Link sx={mergedSx} {...NavLinkProps} {...rest}>
       {children}
     </Link>
   );
