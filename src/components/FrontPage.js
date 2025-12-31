@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { Box, Grid, Typography, Stack, Switch, Button, IconButton, Tooltip } from "@mui/material";
 import { Brightness4, Brightness7} from '@mui/icons-material';
-import {CenteredDivider, HoverLink} from '.';
+import {CenteredDivider, HoverLink, ThemedButton} from '.';
 import me from '../images/me.png';
 import { usePortfolioThemeMode } from "../themes/PortfolioTheme";
 
@@ -63,11 +63,11 @@ function FrontPage(){
                                 <CenteredDivider sx={{ mb: 2 }}/>
 
                                 <Stack spacing={1} sx={{ alignItems: { xs: 'center', md: 'center' }}}>
-                                    <Button component={NavLink} color='secondary' to="/resume" variant="contained" size="small" sx={{ mt: 1, '&:hover': { backgroundColor: 'primary.main' }}}>
+                                    <ThemedButton component={NavLink} to="/resume" size='small' sx={{ mt: 1 }}>
                                     View Resume
-                                    </Button>
+                                    </ThemedButton>
 
-                                    <HoverLink component={NavLink} to="/writing" underline="none" color="text.secondary">Writing — Notes & essays from college</HoverLink>
+                                    <HoverLink to="/writing" underline="none" color="text.secondary">Writing — Notes & essays from college</HoverLink>
                                 </Stack>
                             </Box>
                         </Grid>
