@@ -1,17 +1,14 @@
 import { Box, Grid, Typography} from "@mui/material";
-import {CenteredDivider, ProjectCard} from '.';
+import {ProjectCard} from '.';
 import {projects} from './Pages';
 
 function Projects() {
     return (
         <Box>
             <Box>
-                <Typography variant="h2" sx={{
-                    textAlign: {xs: 'center', sm: 'left'}, 
-                    pl: {xs: 0, sm: 6},
-                }}
-                >
-                    Projects I've worked on</Typography>
+                <Typography variant="h2" sx={{ textAlign: {xs: 'center', sm: 'left'},  pl: {xs: 0, sm: 6}, }} >
+                    Projects I've worked on
+                </Typography>
             </Box>
             <Grid container spacing={3} sx={{px: { xs: 2, sm: 6 }, pt: 3, pb: 6}}>
                 {

@@ -1,22 +1,21 @@
-import {Box,Typography,Grid, List, ListItem,ListItemText, ListItemIcon, IconButton, Tooltip} from '@mui/material';
+import {Box,Typography, IconButton, Tooltip} from '@mui/material';
 import { Home } from '@mui/icons-material';
 import resume from '../images/Eric_Chen_Resume.pdf';
 import { NavLink } from 'react-router-dom';
+import { CenteredDivider }  from '.';
 
 function Resume(){
     window.scrollTo(0, 0);
 
     return(
         <Box>
-            <Box align='center'>
-                <Typography className='no-highlight' variant='h1'>
-                    Resume
-                </Typography>
+            <Box align='center' pt={5}>
                 <Tooltip title="Go home">
                     <IconButton component={NavLink} to='/' color="inherit">
                         <Home/>
                     </IconButton>
                 </Tooltip>
+                <CenteredDivider width='50px' />
             </Box>
 
             <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh" width="100%">
