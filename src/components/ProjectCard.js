@@ -2,13 +2,11 @@ import {
   Card,
   CardMedia,
   CardContent,
-  CardActions,
   Box,
   Typography,
   Stack,
   Chip,
   Link as MuiLink,
-  Button,
 } from '@mui/material';
 import ThemedButton from './ThemedButton';
 

@@ -1,4 +1,4 @@
-import {Box,Typography, IconButton, Tooltip} from '@mui/material';
+import {Box, IconButton, Tooltip} from '@mui/material';
 import { Home } from '@mui/icons-material';
 import resume from '../images/Eric_Chen_Resume.pdf';
 import { NavLink } from 'react-router-dom';
