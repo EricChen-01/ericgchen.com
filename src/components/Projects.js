@@ -1,6 +1,6 @@
 import { Box, Grid, Typography} from "@mui/material";
 import {ProjectCard} from '.';
-import {projects} from './Pages';
+import projects from './Pages/Projects';
 
 function Projects() {
     return (
@@ -13,7 +13,7 @@ function Projects() {
             <Grid container spacing={3} sx={{px: { xs: 2, sm: 6 }, pt: 3, pb: 6}}>
                 {
                     projects.map((project) => (
-                        <Grid item xs={12} md={6} lg={4} xl={3}>
+                        <Grid key={project.title} item xs={12} md={6} lg={4} xl={3}>
                             <ProjectCard 
                                 title={project.title}
                                 subtitle={project.subtitle}
