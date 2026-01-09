@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Box, Grid, Typography, Stack, Switch, Button, IconButton, Tooltip } from "@mui/material";
+import { Box, Grid, Typography, Stack, IconButton, Tooltip } from "@mui/material";
 import { Brightness4, Brightness7} from '@mui/icons-material';
 import {CenteredDivider, HoverLink, ThemedButton} from '.';
 import me from '../images/me.png';

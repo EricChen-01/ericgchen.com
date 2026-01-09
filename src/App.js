@@ -1,10 +1,10 @@
 
 import './App.css';
-import {HashRouter,BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import {ThemeProvider, createTheme } from '@mui/material/styles';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
 import {CssBaseline, Box} from '@mui/material'
 import {Resume, Writing, NotFoundPage, CenteredDivider, FrontPage, Footer as PortfolioFooter, ContactBar, Projects as PortfolioProjects} from './components'
-import { portfolioTheme, usePortfolioThemeMode, PortfolioThemeModeProvider } from './themes/PortfolioTheme';
+import { usePortfolioThemeMode, PortfolioThemeModeProvider } from './themes/PortfolioTheme';
 
 const linkedinUrl = "https://www.linkedin.com/in/erxcchen/";
 const email = "echen3225@gmail.com";
