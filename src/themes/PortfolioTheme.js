@@ -1,6 +1,6 @@
 // theme.js
 import { createTheme } from '@mui/material/styles';
-import React, { createContext, useState, useMemo, useContext, useEffect } from 'react';
+import { createContext, useState, useMemo, useContext } from 'react';
 
 // Portfolio theme definition
 const portfolioTheme = (mode = 'light') => createTheme({

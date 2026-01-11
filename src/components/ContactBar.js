@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, IconButton, Link, Tooltip } from '@mui/material';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
