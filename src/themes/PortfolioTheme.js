@@ -1,6 +1,6 @@
 // theme.js
 import { createTheme } from '@mui/material/styles';
-import React, { createContext, useState, useMemo, useContext } from 'react';
+import React, { createContext, useState, useMemo, useContext, useEffect } from 'react';
 
 // Portfolio theme definition
 const portfolioTheme = (mode = 'light') => createTheme({
@@ -46,9 +46,16 @@ const portfolioTheme = (mode = 'light') => createTheme({
 // Context to provide theme mode context
 const PortfolioThemeModeContext = createContext();
 
+const determineDefaultMode = () => {
+  if (typeof window === "undefined") return "light";
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
 // Provider to provide the mode, setMode, and the theme
 export const PortfolioThemeModeProvider = ({ children }) => {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState(determineDefaultMode);
 
   const theme = useMemo(() => portfolioTheme(mode), [mode]);
 
