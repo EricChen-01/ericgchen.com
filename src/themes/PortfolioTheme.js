@@ -47,7 +47,7 @@ const portfolioTheme = (mode = 'light') => createTheme({
 const PortfolioThemeModeContext = createContext();
 
 const determineDefaultMode = () => {
-  if (typeof window === "undefined") return "light";
+  if (typeof window === "undefined") return "light"; // default to light mode for error handling and edgecase.
 
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
