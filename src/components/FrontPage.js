@@ -39,7 +39,7 @@ function FrontPage(){
                 <Grid item xs={12} md={6}>
                     <Grid container spacing={2} sx={{ px: { xs: 2, md: 0 } }}>
                         <Grid item xs={12} md={12} lg={6}>
-                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'center', lg: 'flex-start'} }}>
+                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'center', lg: 'flex-start' } }}>
                                 <Box
                                     component="img"
                                     src={me}
