@@ -72,13 +72,13 @@ function ProjectCard({
         )}
 
         {subtitle && (
-          <Typography variant="subtitle2" color="text.secondary">
+          <Typography variant="subtitle2" color="text.secondary" gutterBottom>
             {subtitle}
           </Typography>
         )}
 
         {description && (
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+          <Typography variant="body1" color="text.secondary" sx={{ mt: 1 }} gutterBottom>
             {description}
           </Typography>
         )}
@@ -88,7 +88,7 @@ function ProjectCard({
             {tags.length > 0 && (
               <Stack direction="row" gap={1} flexWrap="wrap" sx={{ mb: links.length > 0 ? 1 : 0 }}>
                 {tags.map((t) => (
-                  <Chip key={t} label={t} size="small" />
+                  <Chip key={t} color="secondary" label={t} size="small" />
                 ))}
               </Stack>
             )}

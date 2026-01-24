@@ -1,5 +1,31 @@
 const projects = [
   {
+    title: "Redstone",
+    description:
+      "Redstone is a custom scripting language written in C# that reimagines common programming constructs using Minecraft-themed keywords while remaining fully executable. The project includes a complete language pipeline, lexical analysis to runtime evaluation, alongside a custom VS Code extension for syntax highlighting and developer ergonomics.",
+    technologies: ["C#"],
+    isPath: false,
+    path: "https://github.com/EricChen-01/Redstone",
+    image:
+      "",
+  },
+  {
+    title: "QRGen",
+    description:
+      "A small React + TypeScript web application to create and style QR codes.",
+    technologies: ["React", "TypeScript", "Vite"],
+    isPath: false,
+    path: "https://github.com/EricChen-01/QRGen",
+    links: [
+      {
+        label: "Project Site",
+        href: "https://qrgen.ericgchen.com",
+        external: true,
+      },
+    ],
+    image: "/images/qrgen.png",
+  },
+  {
     title: "GitHub Summarizer Semantic Kernel AI Plugin",
     description:
       "A Semantic Kernel AI plugin that I've developed during my time as a Microsoft intern that summarizes GitHub repositories AI.",
@@ -34,22 +60,6 @@ const projects = [
         external: true,
       },
     ],
-  },
-  {
-    title: "QRGen",
-    description:
-      "A small React + TypeScript web application to create and style QR codes.",
-    technologies: ["React", "TypeScript", "Vite"],
-    isPath: false,
-    path: "https://github.com/EricChen-01/QRGen",
-    links: [
-      {
-        label: "Project Site",
-        href: "https://qrgen.ericgchen.com",
-        external: true,
-      },
-    ],
-    image: "/images/qrgen.png",
   },
   {
     title: "Hopper Hacks 2024",
