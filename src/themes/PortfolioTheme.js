@@ -15,7 +15,7 @@ const portfolioTheme = (mode = 'light') => createTheme({
       contrastText: mode === 'light' ? '#253237' : '#F1F0EA',
     },
     secondary: {
-      main: mode === 'light' ? '#5C6B73' : '#607da4ff',   
+      main: mode === 'light' ? '#414b50' : '#607da4ff',   
       contrastText: mode === 'light' ? '#F1F0EA' : '#363b3dff',
     },
     text: {
@@ -26,18 +26,42 @@ const portfolioTheme = (mode = 'light') => createTheme({
   typography: {
     fontFamily: 'Paytone One, sans-serif',
     h1: {
-      fontSize: '3.5rem',
+      fontSize: '3.3rem',
       fontWeight: 600,
     },
     h2: {
-      fontSize: '2rem',
+      fontSize: '2.6rem',
       fontWeight: 600,
     },
+    h3: {
+      fontSize: '2.1rem',
+      fontWeight: 600,
+      lineHeight: 1.3,
+    },
+    h4: {
+      fontSize: '1.7rem',
+      fontWeight: 600,
+      lineHeight: 1.35,
+    },
+    h5: {
+      fontSize: '1.4rem',
+      fontWeight: 600,
+      lineHeight: 1.4,
+    },
+    h6: {
+      fontSize: '1.15rem',
+      fontWeight: 600,
+      lineHeight: 1.45,
+    },
     body1: {
-      fontSize: '1rem',
+      fontSize: '1rem',        // main reading text
+      fontWeight: 400,
+      lineHeight: 1.6,
     },
     body2: {
-      fontSize: '0.9rem',
+      fontSize: '0.875rem',
+      fontWeight: 400,
+      lineHeight: 1.6,
     },
   },
 });

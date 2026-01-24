@@ -13,11 +13,10 @@ function FrontPage(){
             <Grid 
                 container
                 minHeight='100vh'
-                justifyContent='space-around'
-                alignItems='center'
+                justifyContent='space-evenly'
             >
                 <Grid item xs={12}>
-                    <Box align='center'>
+                    <Box align='center' pt={2} pb={{xs:2, s:0}}>
                         <Tooltip title="Toggle Dark mode">
                             <IconButton onClick={()=> setMode(mode === 'dark' ? 'light' : 'dark')} color="inherit">
                                 {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
@@ -27,48 +26,89 @@ function FrontPage(){
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
-                    <Box align='center' sx={{pt:10}}>
-                        <Typography variant='h2' color='text.primary'>
-                        Hello! My name is Eric
+                    <Box align='center' pb={{xs:2, sm: 0}}>
+                        <Typography variant='h1' color='text.primary' gutterBottom>
+                        Hello! My name is{" "}   
+                        <Typography component='span' variant='h1' color="primary">
+                            Eric
                         </Typography>
-                        <Typography variant='subtitle1'>
+                        </Typography>
+                        <Typography variant='h6' color='text.secondary' gutterBottom>
                             Software Engineer
                         </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Grid container spacing={2} sx={{ px: { xs: 2, md: 0 } }}>
+                    <Grid container spacing={2} columnSpacing={{xs: 0, lg:10}} sx={{ px: { xs: 2, md: 0 } }}>
                         <Grid item xs={12} md={12} lg={6}>
-                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'center', lg: 'flex-start' } }}>
+                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'center', lg: 'flex-end' } }}>
+                                <Box
+                                    sx={{
+                                        width: { xs: 300, md: 340, lg: 360 },
+                                        aspectRatio: '4 / 5',
+                                        overflow: 'hidden',
+                                        borderRadius: 5,
+                                        border: '5px solid',
+                                        borderColor: 'primary.main',
+                                        flexShrink: 0,
+                                    }}
+                                >
                                 <Box
                                     component="img"
                                     src={me}
                                     alt="Eric Chen"
                                     sx={{
-                                        borderRadius: 2,
-                                        border: '5px solid',
-                                        borderColor: 'primary.main',
-                                        width: { xs: '280px', md: '300px', lg: '340px' },
-                                        maxWidth: '100%',
-                                        height: 'auto',
-                                        display: 'block',
+                                    width: '100%',
+                                    height: 'auto',
+                                    transform: 'scale(2) translateY(-10%)', // zooms in 20%
+                                    objectFit: 'cover', // zooms in and crops to fill box
+                                    display: 'block',
                                     }}
                                 />
+                                </Box>
                             </Box>
                         </Grid>
 
                         <Grid item xs={12} md={12} lg={6}>
-                            <Box sx={{ width: { xs: '100%', md: 'auto' }, textAlign: { xs: 'center', md: 'center' } }}>
-                                <Typography variant="h6" sx={{ mb: 1 }}>Quick Links</Typography>
-                                <CenteredDivider sx={{ mb: 2 }}/>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    justifyContent: {xs:'center', lg:'flex-start'},
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    textAlign: 'center',
+                                    }}
+                                >
+                                    <Typography variant="h4" sx={{ mb: 1 }}>
+                                    Quick Links
+                                    </Typography>
 
-                                <Stack spacing={1} sx={{ alignItems: { xs: 'center', md: 'center' }}}>
-                                    <ThemedButton component={NavLink} to="/resume" size='small' sx={{ mt: 1 }}>
-                                    View Resume
-                                    </ThemedButton>
+                                    <CenteredDivider sx={{ mb: 2 }} />
 
-                                    <HoverLink to="/writing" underline="none" color="text.secondary">Writing — Notes & essays from college</HoverLink>
-                                </Stack>
+                                    <Stack spacing={1} alignItems="center">
+                                        <ThemedButton
+                                            component={NavLink}
+                                            to="/resume"
+                                            size="small"
+                                            sx={{ mt: 1, width:"100%"}}
+                                        >
+                                            View Resume
+                                        </ThemedButton>
+
+                                        <HoverLink
+                                            to="/writing"
+                                            underline="none"
+                                            color="text.secondary"
+                                        >
+                                            Writing — Notes & essays from college
+                                        </HoverLink>
+                                    </Stack>
+                                </Box>
                             </Box>
                         </Grid>
                     </Grid>

@@ -22,8 +22,10 @@ function PortfolioMain(){
       {/* Content grows to fill space */}
       <Box sx={{ flexGrow: 1 }}>
         <FrontPage/>
-        <PortfolioProjects/>
-        <ContactBar linkedinUrl={linkedinUrl} email={email}/>
+        <Box pt={10}>
+          <PortfolioProjects/>
+        </Box>
+      <ContactBar linkedinUrl={linkedinUrl} email={email}/>
       </Box>
       <CenteredDivider variant='middle' />
       <PortfolioFooter />
