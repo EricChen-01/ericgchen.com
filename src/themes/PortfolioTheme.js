@@ -15,12 +15,12 @@ const portfolioTheme = (mode = 'light') => createTheme({
       contrastText: mode === 'light' ? '#253237' : '#F1F0EA',
     },
     secondary: {
-      main: mode === 'light' ? '#414b50' : '#607da4ff',   
+      main: mode === 'light' ? '#414b50' : 'rgb(118, 155, 204)',   
       contrastText: mode === 'light' ? '#F1F0EA' : '#363b3dff',
     },
     text: {
-      primary: mode === 'light' ? '#253237' : '#d9d9d9ff',   // Default Typograpy Color
-      secondary: mode === 'light' ? '#5C6B73' : '#a1a1a1ff', 
+      primary: mode === 'light' ? '#212121' : '#d9d9d9ff',   // Default Typograpy Color
+      secondary: mode === 'light' ? '#434343' : 'rgb(224, 224, 224)', 
     },
   },
   typography: {

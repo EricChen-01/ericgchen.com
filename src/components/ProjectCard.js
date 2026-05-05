@@ -88,7 +88,7 @@ function ProjectCard({
             {tags.length > 0 && (
               <Stack direction="row" gap={1} flexWrap="wrap" sx={{ mb: links.length > 0 ? 1 : 0 }}>
                 {tags.map((t) => (
-                  <Chip key={t} color="secondary" label={t} size="small" />
+                  <Chip key={t} color="secondary" label={t} size="small"/>
                 ))}
               </Stack>
             )}
