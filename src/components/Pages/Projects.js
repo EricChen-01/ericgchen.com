@@ -1,5 +1,20 @@
 const projects = [
   {
+    title: "Word Of The Day",
+    description: "A full-stack app that serves a daily Japanese vocabulary word with reading, meaning, and usage. The application refreshes once a day for every visitor.",
+    technologies: ["C#", "Azure Table Storage", "Azure Functions", "React"],
+    isPath: false,
+    path: "https://github.com/EricChen-01/WordOfTheDay",
+    links: [
+      {
+        label: "Project Site",
+        href: "https://word-of-the-day.ericgchen.com",
+        external: true,
+      }
+    ],
+    image: "https://wordoftheday.ericgchen.com/favicon.svg",
+  },
+  {
     title: "Redstone",
     description:
       "Redstone is a custom scripting language written in C# that reimagines common programming constructs using Minecraft-themed keywords while remaining fully executable. The project includes a complete language pipeline, lexical analysis to runtime evaluation, alongside a custom VS Code extension for syntax highlighting and developer ergonomics.",
