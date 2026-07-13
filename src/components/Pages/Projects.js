@@ -8,7 +8,7 @@ const projects = [
     links: [
       {
         label: "Project Site",
-        href: "https://word-of-the-day.ericgchen.com",
+        href: "https://wordoftheday.ericgchen.com",
         external: true,
       }
     ],
